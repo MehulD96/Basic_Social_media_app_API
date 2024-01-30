@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>This is Admin dashboard</h1>
+    
+    <table width ="50%">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+        <%
+        if(users.length>0){
+            for(let i=0; i < users.length;i++){
+                %>
+                <tr>
+                    <td><%= users[i].name%></td>
+                    <td><%= users[i].email%></td>
+                    <td><%= users[i].phone%></td>
+                    <td><%= users[i].image%></td>
+                    <td>
+                        <a data-method="PUT" href="/adminedit?id=<%= users[i]._id %>" >Edit</a>
+                        <a data-method="delete" href="/admindelete?id=<%= users[i]._id %>" >delete</a>
+                    </td>
+                </tr>
+                <%
+            }
+        }
+        else{
+            %>
+            <tr>
+                <td colspan="5">Users not found</td>
+                
+            </tr>
+            <%
+        }
+        %>
+
+</body>
+
+</html>

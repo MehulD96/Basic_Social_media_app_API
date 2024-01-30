@@ -1,0 +1,34 @@
+<h1>This is user dashboard</h1>
+<h2>welcome "<%= users.name %>", hope you are doing well...</h2>
+
+<table >
+    <tr>
+        <td>
+            <!--<img src="" alt="<%= users.image %>"></td> -->
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Image
+        </td>
+        <td><img src="./public/userimages" alt="<%= users.image %>"></td>
+    </tr>
+    <tr>
+        <td>
+            Email
+        </td>
+        <td><%= users.email %></td>
+    </tr>
+    <tr>
+        <td>
+            Mobile no.
+        </td>
+        <td><%= users.phone %></td>
+    </tr>
+</table>
+<br><br>
+<div class="nav" id="basicsOfCrew">
+    <a href="/update?id=<%=users._id %>" >Edit</a>
+    <br><br>
+    <a href="/logout" >Logout</a>
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit user</h1>
+    <!--<img src="userImages/<%= user.image %>" width = "100px" height="100px" alt="<%= user.image %>">-->
+
+    <form action ="" method="POST" >
+        <input type="hidden" name="user_id" value ="<%=user._id %>">
+        <!--<input type="file" name="image">
+        <br><br>-->
+        <label>New Name
+        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter name" required>    
+        </label>
+        <br><br>
+        <label>New email
+        <input type="email" name="email" value="<%= user.email %>" placeholder="Enter email" required>    
+        </label>
+        <br><br>
+        <input type="submit" value="Update">
+    </form>
+
+    <div class="nav" id="basicsOfCrew">
+        <a href="/admindashboard">Go to dashboard</a>
+        <br><br>
+    </div>
+    </body>
+</html>
